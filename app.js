@@ -15,6 +15,21 @@ app.get('/', (req, res) => {
   res.send('Hello, GET request!');
 });
 
+// Route GET untuk /text
+app.get('/text', (req, res) => {
+    res.send('Ini adalah response text.');
+  });
+
+// Route GET untuk /html
+app.get('/html', (req, res) => {
+    res.send('<h1>Ini adalah response HTML</h1>');
+  });
+
+// Route GET untuk /json
+app.get('/json', (req, res) => {
+    res.json({ message: 'Ini adalah response JSON' });
+  });
+
 // Route POST
 app.post('/submit', (req, res) => {
   const { name } = req.body; // Mendapatkan nilai 'name' dari body request
